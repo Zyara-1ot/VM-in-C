@@ -63,5 +63,3 @@ The VM simulates:
 
 
 
-Free to use for educational purposes.
-EOF
