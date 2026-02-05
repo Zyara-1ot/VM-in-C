@@ -16,9 +16,11 @@ int main(int argc, char* * argv){
     char *outf = "sum.obj";
     FILE *f = fopen(outf, "wb");
     if(NULL==f){
-        fprint(stderr, "cannot write to file %s\n", outf);
+        fprintf(stderr, "cannot write to file %s\n", outf);
     }
     size_t writ = fwrite(program, sizeof(uint16_t), sizeof(program), f);
     fprintf(stdout, "written size_t=%lu to file %s\n", writ, outf);
+
+    fclose(f);
     return 0;
 }
