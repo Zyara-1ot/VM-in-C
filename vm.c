@@ -69,7 +69,10 @@ static inline void tputs() {
 static inline void tin() { reg[R0] = getchar(); fprintf(stdout, "%c", reg[R0]); }
 static inline void tputsp() {}
 static inline void thalt() { running = false; } 
-static inline void tinu16() { fscanf(stdin, "%hu", &reg[R0]); }
+static inline void tinu16() { 
+   printf("\n Enter a numbers");
+    fscanf(stdin, "%hu", &reg[R0]); 
+}
 static inline void toutu16() { fprintf(stdout, "%hu\n", reg[R0]); }
 trp_ex_f trp_ex[8] = { tgetc, tout, tputs, tin, tputsp, thalt, tinu16, toutu16 };
 static inline void trap(uint16_t i) { trp_ex[TRP(i)-trp_offset](); }
@@ -83,6 +86,12 @@ void start(uint16_t offset) {
 }
 
 void id_img(char *fname, uint16_t offset){
+    char *check = strstr(fname,".obj");
+  if (check==NULL){
+      printf("\n The provided file is not .obj, Pls pass a .obj file\n");
+      exit(1);
+  
+  }
     FILE *in = fopen(fname, "rb");
     if( NULL == in){
         fprintf(stderr, "cannot open file %s.\n", fname);
