@@ -4,7 +4,7 @@
 #include <string.h>
 #include <string.h>
 #include <stdbool.h>
-#include "vm_debug.h"
+#include "../lib/vm_debug.h"
 #define NOPS (16)
 #define OPC(i) ((i)>>12)
 #define DR(i) (((i)>>9)&0x7)
