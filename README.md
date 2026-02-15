@@ -28,6 +28,25 @@ This project implements a functional LC-3 VM that can load and execute LC-3 mach
 ```bash
 gcc -Wall -std=c11 vm.c vm_debug.c -o vm
 ```
+OR
+### Compile with Make (Recommended)
+```bash
+# Build everything
+make
+
+# Build specific target
+make vm
+make sum
+make prog
+
+# Clean up
+make clean
+
+# Rebuild from scratch
+make clean && make
+
+```
+
 
 ### Compile the example program generator:
 ```bash

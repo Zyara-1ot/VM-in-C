@@ -1,4 +1,4 @@
-#include "vm_debug.h"
+#include "../lib/vm_debug.h"
 
 void fprintf_binary(FILE *f, uint16_t num){
     int c = 16;
