@@ -30,7 +30,7 @@ enum {trp_offset = 0x20};
 enum regist {R0 = 0, R1, R2, R3, R4, R5, R6, R7, RPC, RCND, RCNT};
 enum flags {FP = 1 << 0, FZ = 1 << 1, FN = 1 << 2};
 
-uint16_t mem[UINT16_MAX] = {0};
+uint16_t mem[UINT16_MAX + 1] = {0};
 uint16_t reg[RCNT] = {0};
 uint16_t PC_START = 0x3000;
 
