@@ -1,0 +1,14 @@
+*.o
+*.out
+a.out
+vm
+simple_program
+*.obj
+
+*~
+*.swp
+*.swo
+
+.DS_Store
+Thumbs.db
+
