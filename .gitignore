@@ -1,0 +1,7 @@
+*.obj
+*.out
+*.swp
+*.save
+packer
+prog
+vm
