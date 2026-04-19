@@ -14,7 +14,7 @@
 #define IMM(i) ((i)&0x1F)
 #define SEXTMM(i) sext(IMM(i)&0x3F, 6)
 #define FCND(i) (((i)>>9)&0x7)
-#define POFF(i) sext((i)&0x1ff, 6)
+#define POFF(i) sext((i) & 0x3F, 6)
 #define POFF9(i) sext((i)&0x1FF, 9)
 #define POFF11(i) sext((i)&0x7FF, 11)
 #define FL(i) (((i)>>11)&1)
