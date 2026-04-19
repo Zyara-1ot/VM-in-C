@@ -47,7 +47,7 @@ static inline void and(uint16_t i) {reg[DR(i)] = reg[SR1(i)] & (FIMM(i) ?  SEXTM
 static inline void ldi(uint16_t i) {reg[DR(i)] = mr(mr(reg[RPC]+POFF9(i))); uf(DR(i));}
 static inline void not (uint16_t i) {reg[DR(i)] =~reg[SR1(i)]; uf(DR(i)); }
 static inline void br (uint16_t i) {if (reg[RCND] & FCND(i)) {reg[RPC] += POFF9(i); }}
-static inline void jsr (uint16_t i) {reg[R7] = reg[RPC]; reg[RPC] = (FL(i)) ? reg[RPC] + POFF9(i) : reg[BR(i)];}
+static inline void jsr (uint16_t i) {reg[R7] = reg[RPC]; reg[RPC] = (FL(i)) ? reg[RPC] + POFF11(i) : reg[BR(i)];}
 static inline void jmp (uint16_t i) {reg[RPC] = reg[BR(i)]; }
 static inline void ld (uint16_t i) {reg[DR(i)] = mr(reg[SR1(i)] + POFF9(i)); uf(DR(i));}
 static inline void ldr (uint16_t i) {reg[DR(i)] = reg[RPC] + POFF(i); uf(DR(i));}
